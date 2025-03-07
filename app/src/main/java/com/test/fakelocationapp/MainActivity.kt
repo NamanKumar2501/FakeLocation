@@ -52,11 +52,10 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
 
-        val searchButton = findViewById<Button>(R.id.searchButton)
         val searchEditText = findViewById<EditText>(R.id.searchEditText)
         val start = findViewById<Button>(R.id.toggleMockButton)
 
-        searchButton.setOnClickListener {
+        binding.searchButton.setOnClickListener {
             val cityText = searchEditText.text.toString().trim()
             getCityLocation(cityText)
         }
@@ -65,11 +64,11 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             if (isStart) {
                 isStart = false
                 toggleMockLocation()
-                binding.toggleMockButton.text = "Stop Mocking"
+                binding.toggleMockButton.text = "Stop"
             } else {
                 isStart = true
                 toggleMockLocation()
-                binding.toggleMockButton.text = "Start Mocking"
+                binding.toggleMockButton.text = "Start"
             }
         }
 
@@ -165,7 +164,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             mockLocationService.latLng = latLng!!
             mockLocationService.toggleMocking() // Start/Stop Mocking
         } else {
-            Toast.makeText(this, "No location selected for mocking", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "No location selected", Toast.LENGTH_SHORT).show()
         }
     }
 
