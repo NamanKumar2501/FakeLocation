@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Ignore gradle.properties to keep sensitive data like API keys out of version control
+gradle.properties

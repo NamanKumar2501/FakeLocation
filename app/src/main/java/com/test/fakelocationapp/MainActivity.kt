@@ -164,7 +164,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             mockLocationService.latLng = latLng!!
             mockLocationService.toggleMocking() // Start/Stop Mocking
         } else {
-            Toast.makeText(this, "No location selected", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "No location selected for mocking", Toast.LENGTH_SHORT).show()
         }
     }
 

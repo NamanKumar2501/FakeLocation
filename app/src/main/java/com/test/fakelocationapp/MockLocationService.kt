@@ -1,5 +1,6 @@
 package com.test.fakelocationapp
 
+import android.annotation.SuppressLint
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -12,6 +13,7 @@ import android.os.SystemClock
 import android.util.Log
 import android.widget.Toast
 import com.google.android.gms.maps.model.LatLng
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -53,6 +55,7 @@ class MockLocationService : Service() {
     fun toggleMocking() {
         if (isMocking) stopMockingLocation() else startMockingLocation()
     }
+
 
     private fun startMockingLocation() {
         if (!isMocking) {
