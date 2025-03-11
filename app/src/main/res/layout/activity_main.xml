@@ -26,7 +26,7 @@
             android:layout_weight="1"
             android:autofillHints="44454"
             android:background="@drawable/search_left_style"
-            android:hint="Enter SKU Number"
+            android:hint="Search Location"
             android:inputType="textCapCharacters"
             android:paddingStart="15dp"
             android:paddingEnd="10dp"
